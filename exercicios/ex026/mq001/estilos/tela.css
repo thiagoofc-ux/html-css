@@ -1,0 +1,35 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+html{
+    font-family: sans-serif;
+    font-size: 1rem;
+}
+
+header{
+    background: lightcyan;
+}
+
+h1{
+    text-align: center;
+}
+
+menu ul{
+    list-style: none;
+    background-color: aqua;
+}
+
+li{
+    background-color: rgb(2, 179, 179);
+    display: inline-block;
+    padding: 10px;
+    color: white;
+}
+
+article{
+    width: 600px;
+    display: block;
+    margin: auto;
+}

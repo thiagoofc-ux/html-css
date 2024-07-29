@@ -1,0 +1,75 @@
+/* Typical Device Breakpoints
+
+Pequenas telas: até 600px
+Celular: de 600px até 768px
+Tablets: de 768 ate 992px
+Desktop: 992px até 1200px
+Grandes telas: acima de 1200px */
+
+
+
+@media print {
+    *{
+        font-family: 'Courier New', Courier, monospace;
+    }
+    
+    h1{
+        text-shadow: none;
+        color: black;
+    }
+    main{
+         border: 2px solid black;
+         width: 90vw;
+    }
+    main::after{
+        content: 'Essa impressão foi feito por Thiago Alves';
+        text-decoration: overline;
+    }
+    #phone{display: none;}
+    #pc{display: none;}
+    #print{display: block;}
+    #tv{display: none;}
+    #tablet{display: none;}
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+
+    /*tablet*/
+    body {
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+
+    #phone{display: none;}
+    #pc{display: none;}
+    #print{display: none;}
+    #tv{display: none;}
+    #tablet{display: block;}
+
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    /*desktop*/
+    body{
+        background-image: url(../imagens/back-pc.jpg);
+    }
+    #phone{display: none;}
+    #pc{display: block;}
+    #print{display: none;}
+    #tv{display: none;}
+    #tablet{display: none;}
+}
+
+@media screen and (min-width: 1200px) {
+    /*grandes telas*/
+    body{
+        background-image: url(../imagens/back-tv.jpg);
+    }
+    main{
+        width: 700px;
+    }
+
+    #phone{display: none;}
+    #pc{display: none;}
+    #print{display: none;}
+    #tv{display: block;}
+    #tablet{display: none;}
+}   
